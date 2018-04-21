@@ -1,0 +1,7 @@
+#!/home/yuching/Github/JerryHW/0416/0416/ntust/bin/python3
+
+import warnings
+warnings.simplefilter('default', DeprecationWarning)
+
+from logilab.common.pytest import run
+run()

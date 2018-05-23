@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Q1.簡易計算機</h2>
+<p id="answer" type="number">answer:</p>
+<input id="input1" type="number">
+<input id="input2" type="number">
+
+<button onclick="add()">加</button>
+<button onclick="sub()">減</button>
+<button onclick="mul()">乘</button>
+<button onclick="div()">除</button>
+<button onclick="c()">清除</button>
+
+<br>
+
+<h2>Q2.成績判斷</h2>
+<input id="score" type="number">
+<button onclick="score()">成績判斷</button>
+<p id="output"></p>
+
+
+<script>
+function c() {
+    document.getElementById("answer").innerHTML = 'answer:';
+    document.getElementById("input1").value = '';
+    document.getElementById("input2").value = '';
+}
+function add() {
+    var p1 = Number(document.getElementById("input1").value);
+    var p2 = Number(document.getElementById("input2").value);
+    var answer = p1 + p2;
+    document.getElementById("answer").innerHTML = "answer:" + answer;
+}
+function sub() {
+    var p1 = Number(document.getElementById("input1").value);
+    var p2 = Number(document.getElementById("input2").value);
+    var answer = p1 - p2;
+    document.getElementById("answer").innerHTML = "answer:" + answer;
+}   
+function mul() {
+    var p1 = Number(document.getElementById("input1").value);
+    var p2 = Number(document.getElementById("input2").value);
+    var answer = p1 * p2;
+    document.getElementById("answer").innerHTML = "answer:" + answer;
+}
+function div() {
+    var p1 = Number(document.getElementById("input1").value);
+    var p2 = Number(document.getElementById("input2").value);
+    var answer = p1 / p2;
+    document.getElementById("answer").innerHTML = "answer:" + answer;
+}
+
+function score() {
+    var score = Number(document.getElementById("score").value);
+    if (score < 60) {
+        document.getElementById("output").innerHTML = "不及格，請加油";
+    }
+    else if (score > 100) {
+        document.getElementById("output").innerHTML = "超過一百分";
+    }
+    else {
+        document.getElementById("output").innerHTML = "及格";
+    }
+}
+</script>
+
+</body>
+</html>
